@@ -32,7 +32,6 @@ export default function Hero() {
               <p className="text-xl md:text-2xl font-medium gradient-text">
                 Data Analyst | Senior Statistical Programmer
               </p>
-              {/* </CHANGE> */}
               <p className="text-lg text-muted-foreground leading-relaxed max-w-xl text-pretty">
                 Senior data professional with 5+ years building enterprise-scale analytics pipelines, ML systems, and
                 clinical research solutions. Specializing in SAS, Python, SQL, PySpark, and cloud infrastructure.
@@ -42,8 +41,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4 pt-2">
               <a
                 href="/Ashwathy_Ashokan_Resume_Data_Analyst.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                download
                 className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:scale-105 hover:shadow-lg transition-all duration-200"
               >
                 Download Resume
@@ -93,8 +91,8 @@ export default function Hero() {
                   className="object-cover"
                   priority
                 />
-                {/* </CHANGE> */}
               </div>
+              {/* </CHANGE> */}
             </div>
           </div>
         </div>
