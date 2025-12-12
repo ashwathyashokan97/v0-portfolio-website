@@ -1,48 +1,87 @@
+"use client"
+
+import { useEffect, useState } from "react"
+
 export default function Skills() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 500)
+    return () => clearTimeout(timer)
+  }, [])
+
   const skillCategories = [
     {
       title: "Programming & Data",
-      skills: ["SAS", "Python", "SQL", "PySpark", "R", "Scala"],
+      icon: "💻",
+      skills: ["SAS Base/Advanced/Macros (5+ years)", "Python", "SQL", "PySpark", "R", "Scala"],
     },
     {
       title: "ML & Analytics",
-      skills: ["XGBoost", "Scikit-Learn", "TensorFlow", "NLP", "Topic Modeling", "Sentiment Analysis"],
+      icon: "🤖",
+      skills: [
+        "XGBoost",
+        "Scikit-Learn",
+        "TensorFlow",
+        "NLP",
+        "Topic Modeling",
+        "Sentiment Analysis",
+        "Regression",
+        "Clustering",
+      ],
     },
     {
       title: "Big Data & Cloud",
-      skills: ["Kafka", "Spark Streaming", "Hadoop", "AWS EC2", "Docker", "Airflow"],
+      icon: "☁️",
+      skills: ["Apache Kafka", "Spark Streaming", "Hadoop", "AWS EC2", "Docker", "Apache Airflow"],
     },
     {
       title: "BI & Visualization",
-      skills: ["Tableau", "Power BI", "Plotly", "Matplotlib", "Seaborn"],
+      icon: "📊",
+      skills: ["Tableau", "Power BI", "Plotly", "Matplotlib", "Seaborn", "D3.js"],
     },
     {
       title: "Clinical & Regulatory",
-      skills: ["SDTM/ADaM", "Define.xml", "P21 Submissions", "TLFs", "FDA Compliance"],
+      icon: "⚕️",
+      skills: ["SDTM/ADaM", "Define.xml", "P21 Submissions", "TLFs", "FDA Compliance", "CDISC", "21 CFR Part 11"],
     },
     {
       title: "Databases & Tools",
-      skills: ["MongoDB", "PostgreSQL", "FastAPI", "Git", "Jupyter", "Twilio"],
+      icon: "🗄️",
+      skills: ["MongoDB", "PostgreSQL", "FastAPI", "Git", "Jupyter", "Twilio", "Next.js"],
     },
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section
+      className={`py-20 px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
+    >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12">Skills & Expertise</h2>
+        <div className="mb-12">
+          <h2 className="text-4xl font-bold mb-4">Skills & Expertise</h2>
+          <p className="text-lg text-muted-foreground">Comprehensive toolkit for modern data challenges</p>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillCategories.map((category, idx) => (
             <div
               key={category.title}
-              className="bg-card rounded-lg p-6 border border-border hover:border-primary/50 transition-colors"
+              className="glass rounded-lg p-6 border border-border/50 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group hover:scale-105"
+              style={{
+                transitionDelay: `${idx * 50}ms`,
+              }}
             >
-              <h3 className="font-semibold text-lg mb-4 text-primary">{category.title}</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">{category.icon}</span>
+                <h3 className="font-semibold text-lg text-primary group-hover:text-accent transition-colors">
+                  {category.title}
+                </h3>
+              </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-background text-xs font-medium rounded-full border border-border hover:bg-primary/10 hover:border-primary transition-colors"
+                    className="px-3 py-1.5 bg-background/50 text-xs font-medium rounded-full border border-border/50 hover:bg-primary/10 hover:border-primary/50 transition-all duration-200 cursor-default"
                   >
                     {skill}
                   </span>
