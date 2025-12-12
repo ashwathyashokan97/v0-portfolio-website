@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { useEffect, useState } from "react"
 
 export default function Hero() {
@@ -40,13 +39,13 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4 pt-2">
               <a
-                href="/Ashwathy_Ashokan_Resume_Data_Analyst.pdf"
-                download
+                href="https://raw.githubusercontent.com/ashwathyashokan97/v0-portfolio-website/main/public/Ashwathy_Ashokan_Resume_Data_Analyst.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:scale-105 hover:shadow-lg transition-all duration-200"
               >
                 Download Resume
               </a>
-              {/* </CHANGE> */}
               <Link
                 href="#projects"
                 className="px-8 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/10 hover:scale-105 transition-all duration-200"
@@ -84,15 +83,12 @@ export default function Hero() {
             <div className="relative w-80 h-80 md:w-96 md:h-96">
               <div className="absolute inset-0 rounded-2xl glass border-2 border-border/50"></div>
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                <Image
-                  src="/Profile_picture_Ashwathy_Ashokan.jpeg"
+                <img
+                  src="https://raw.githubusercontent.com/ashwathyashokan97/v0-portfolio-website/main/public/Profile_picture_Ashwathy_Ashokan.jpeg"
                   alt="Portrait of Ashwathy Ashokan"
-                  fill
-                  className="object-cover"
-                  priority
+                  className="w-full h-full object-cover"
                 />
               </div>
-              {/* </CHANGE> */}
             </div>
           </div>
         </div>
