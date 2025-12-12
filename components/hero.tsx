@@ -28,11 +28,12 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-6xl md:text-7xl font-bold leading-tight text-balance">
-                Data Analyst &<br />
-                <span className="gradient-text">Statistical Programmer</span>
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-xl text-pretty">
+              <h1 className="text-5xl md:text-6xl font-bold leading-tight text-balance">Ashwathy Ashokan</h1>
+              <p className="text-xl md:text-2xl font-medium gradient-text">
+                Data Analyst | Senior Statistical Programmer
+              </p>
+              {/* </CHANGE> */}
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl text-pretty">
                 Senior data professional with 5+ years building enterprise-scale analytics pipelines, ML systems, and
                 clinical research solutions. Specializing in SAS, Python, SQL, PySpark, and cloud infrastructure.
               </p>
@@ -40,13 +41,14 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4 pt-2">
               <a
-                href="https://raw.githubusercontent.com/ashwathyashokan97/v0-portfolio-website/main/Ashwathy_Ashokan_Resume_Data_Analyst.pdf"
+                href="/Ashwathy_Ashokan_Resume_Data_Analyst.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:scale-105 hover:shadow-lg transition-all duration-200"
               >
                 Download Resume
               </a>
+              {/* </CHANGE> */}
               <Link
                 href="#projects"
                 className="px-8 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/10 hover:scale-105 transition-all duration-200"
@@ -85,12 +87,13 @@ export default function Hero() {
               <div className="absolute inset-0 rounded-2xl glass border-2 border-border/50"></div>
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <Image
-                  src="https://raw.githubusercontent.com/ashwathyashokan97/v0-portfolio-website/main/WhatsApp%20Image%202025-12-11%20at%207.41.47%20PM.jpeg"
-                  alt="Ashwathy Ashokan"
+                  src="/Profile_picture_Ashwathy_Ashokan.jpeg"
+                  alt="Portrait of Ashwathy Ashokan"
                   fill
                   className="object-cover"
                   priority
                 />
+                {/* </CHANGE> */}
               </div>
             </div>
           </div>

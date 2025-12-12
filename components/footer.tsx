@@ -35,25 +35,31 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Social</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a
+                  href="https://www.linkedin.com/in/ashwathy-ashokan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a
+                  href="https://github.com/ashwathyashokan97"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
                   GitHub
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="mailto:ashwathyreddy.97@gmail.com" className="hover:text-primary transition-colors">
                   Email
                 </a>
               </li>
+              {/* </CHANGE> */}
             </ul>
           </div>
 
